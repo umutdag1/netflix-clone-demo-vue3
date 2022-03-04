@@ -1,4 +1,4 @@
-# netflix-clone
+# netflix-clone-demo-vue3
 
 ## Project setup
 ```
