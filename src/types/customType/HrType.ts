@@ -1,6 +1,6 @@
 type HrType = {
-    class : string[],
-    style : object
+  class: string[]
+  style: object
 }
 
-export default HrType;
+export default HrType

@@ -1,6 +1,6 @@
 type ObjectCssType = {
-    class : string[],
-    style : {}
+  class: string[]
+  style: {}
 }
 
-export default ObjectCssType;
+export default ObjectCssType

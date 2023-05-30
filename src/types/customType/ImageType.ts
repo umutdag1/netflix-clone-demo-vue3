@@ -1,7 +1,7 @@
 type ImageType = {
-    imgSrc : string,
-    class : string[],
-    style : {}
+  imgSrc: string
+  class: string[]
+  style: {}
 }
 
-export default ImageType;
+export default ImageType

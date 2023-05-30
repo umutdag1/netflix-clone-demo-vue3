@@ -1,5 +1,5 @@
 <template>
-  <template v-for="(dropdownitem,i) in dropdownArr" :key="i" >
+  <template v-for="(dropdownitem, i) in dropdownArr" :key="i">
     <div class="dropdown">
       <a
         class="dropdown-toggle"
@@ -13,8 +13,8 @@
       >
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li v-for="(dropdownliitem,j) in dropdownitem.liitems" :key="j">
-            <a class="dropdown-item" href="#" v-html="dropdownliitem"></a>
+        <li v-for="(dropdownliitem, j) in dropdownitem.liitems" :key="j">
+          <a class="dropdown-item" href="#" v-html="dropdownliitem"></a>
         </li>
       </ul>
     </div>
@@ -22,18 +22,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import DropDownType from "@/types/eventType/DropDownType";
+import { defineComponent, PropType } from 'vue'
+import DropDownType from '@/types/eventType/DropDownType'
 
 export default defineComponent({
-    props: {
-        dropdownArr : {
-            required : true,
-            type : Array as PropType<DropDownType[]>,
-        }
+  props: {
+    dropdownArr: {
+      required: true,
+      type: Array as PropType<DropDownType[]>
     }
-});
+  }
+})
 </script>
 
-<style>
-</style>
+<style></style>

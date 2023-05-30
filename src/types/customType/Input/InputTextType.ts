@@ -1,8 +1,8 @@
 type InputTextType = {
-    inputType : string
-    placeholder: string,
-    class : string[],
-    style : {}
+  inputType: string
+  placeholder: string
+  class: string[]
+  style: {}
 }
 
-export default InputTextType;
+export default InputTextType

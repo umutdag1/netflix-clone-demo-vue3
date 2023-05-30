@@ -6,38 +6,37 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from "vue";
-import InfoCard from "@/components/mixed/card/InfoCard.vue";
-import Horizontal from "@/components/elems/customElem/Hr.vue";
-import InfoCardType from "@/types/mixedType/InfoCardType";
-import HrType from "@/types/customType/HrType";
+import { defineComponent, PropType, ref } from 'vue'
+import InfoCard from '@/components/mixed/card/InfoCard.vue'
+import Horizontal from '@/components/elems/customElem/Hr.vue'
+import InfoCardType from '@/types/mixedType/InfoCardType'
+import HrType from '@/types/customType/HrType'
 export default defineComponent({
-  setup(){
+  setup() {
     const hrArr = ref<HrType[]>([
       {
-        class: ["p-0", "m-0"],
-        style: { height: "10px", borderColor: "#222", opacity: "1" },
-      },
-    ]);
+        class: ['p-0', 'm-0'],
+        style: { height: '10px', borderColor: '#222', opacity: '1' }
+      }
+    ])
 
-    return {hrArr}
+    return { hrArr }
   },
   props: {
     infoArr: {
       required: true,
-      type: Array as PropType<InfoCardType[]>,
+      type: Array as PropType<InfoCardType[]>
     },
-    css : {
+    css: {
       required: true,
-      type : Object
+      type: Object
     }
   },
   components: {
     InfoCard,
     Horizontal
-  },
-});
+  }
+})
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

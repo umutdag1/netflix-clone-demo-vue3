@@ -1,8 +1,8 @@
 type RouterButtonType = {
-    routerLink : string, 
-    routerName : string, 
-    class : string[],
-    style : object
+  routerLink: string
+  routerName: string
+  class: string[]
+  style: object
 }
 
-export default RouterButtonType;
+export default RouterButtonType

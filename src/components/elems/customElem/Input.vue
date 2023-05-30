@@ -5,9 +5,7 @@
       :class="inputElem.class"
       :style="inputElem.style"
       :placeholder="inputElem.placeholder"
-      v-if="
-        inputElem.inputType === 'text' || inputElem.inputType === 'password'
-      "
+      v-if="inputElem.inputType === 'text' || inputElem.inputType === 'password'"
     />
     <div
       :class="inputElem.div.class"
@@ -28,18 +26,17 @@
 </template>
 
 <script lang="ts">
-import InputGeneralType from "@/types/customType/Input/InputGeneralType";
-import { defineComponent, PropType } from "vue";
+import InputGeneralType from '@/types/customType/Input/InputGeneralType'
+import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
   props: {
     inputArr: {
       required: true,
-      type: Array as PropType<InputGeneralType[]>,
-    },
-  },
-});
+      type: Array as PropType<InputGeneralType[]>
+    }
+  }
+})
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

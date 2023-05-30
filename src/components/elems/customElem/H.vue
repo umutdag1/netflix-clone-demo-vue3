@@ -46,46 +46,46 @@
 </template>
 
 <script lang="ts">
-import HType from "@/types/customType/HType";
-import { defineComponent, PropType } from "vue";
+import HType from '@/types/customType/HType'
+import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
   props: {
     hArr: {
       required: true,
-      type: Array as PropType<HType[]>,
+      type: Array as PropType<HType[]>
     },
     showItem: {
       required: false,
       type: Object,
-      default : () => { return {showItemStatus: true, index: -1} }
+      default: () => {
+        return { showItemStatus: true, index: -1 }
+      }
     },
     hIndex: {
       required: false,
       type: Number,
-      default: -1,
-    },
+      default: -1
+    }
   },
   data() {
     return {
       status: false
-    };
+    }
   },
   watch: {
     showItem() {
       if (this.showItem.index === this.hIndex && this.showItem.index !== -1) {
-        this.status = this.showItem.showItemStatus;
+        this.status = this.showItem.showItemStatus
       }
-    },
+    }
   },
   mounted() {
     if (this.showItem.index === -1) {
-      this.status = true;
+      this.status = true
     }
-  },
-});
+  }
+})
 </script>
 
-<style scoped>
-  
-</style>
+<style scoped></style>

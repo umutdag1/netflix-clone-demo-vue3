@@ -1,7 +1,7 @@
-type ButtonType = { 
-    btnName : string, 
-    class : string[],
-    style : object
+type ButtonType = {
+  btnName: string
+  class: string[]
+  style: object
 }
 
-export default ButtonType;
+export default ButtonType

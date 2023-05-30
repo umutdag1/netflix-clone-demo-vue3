@@ -1,7 +1,7 @@
 type VideoType = {
-    src : string,
-    class : string[],
-    style : object
-} 
+  src: string
+  class: string[]
+  style: object
+}
 
-export default VideoType;
+export default VideoType

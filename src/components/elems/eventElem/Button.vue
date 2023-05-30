@@ -10,43 +10,43 @@
 </template>
 
 <script lang="ts">
-import ButtonType from "@/types/eventType/ButtonType";
-import { defineComponent, PropType } from "vue";
+import ButtonType from '@/types/eventType/ButtonType'
+import { defineComponent, PropType } from 'vue'
 export default defineComponent({
   props: {
     btnArr: {
       required: true,
-      type: Array as PropType<ButtonType[]>,
+      type: Array as PropType<ButtonType[]>
     },
     btnIndex: {
       required: false,
       type: Number,
-      default : -1
+      default: -1
     }
   },
   data() {
     return {
-      showItem: false,
-    };
-  },
-  emits: ["showItem"],
-  methods: {
-    sendShowItem() {
-      this.showItem = !this.showItem;
-      this.$emit("showItem", {showItemStatus : this.showItem, index : this.btnIndex});
-    },
-    conditionalIconChange(htmlElem : string){
-      //console.log(htmlElem.search("[\\+]"));
-      if(htmlElem.search("^Netfli[\\&times]") > -1 && !this.showItem){
-        return htmlElem.replace(htmlElem[htmlElem.search("^Netfli[\\&times]")], "+");
-      } else if(htmlElem.search("[\\+]") > -1 && this.showItem) {
-        return htmlElem.replace(htmlElem[htmlElem.search("[\\+]")], "&times");
-      } else {
-        return htmlElem;
-      }
+      showItem: false
     }
   },
-});
+  emits: ['showItem'],
+  methods: {
+    sendShowItem() {
+      this.showItem = !this.showItem
+      this.$emit('showItem', { showItemStatus: this.showItem, index: this.btnIndex })
+    },
+    conditionalIconChange(htmlElem: string) {
+      //console.log(htmlElem.search("[\\+]"));
+      if (htmlElem.search('^Netfli[\\&times]') > -1 && !this.showItem) {
+        return htmlElem.replace(htmlElem[htmlElem.search('^Netfli[\\&times]')], '+')
+      } else if (htmlElem.search('[\\+]') > -1 && this.showItem) {
+        return htmlElem.replace(htmlElem[htmlElem.search('[\\+]')], '&times')
+      } else {
+        return htmlElem
+      }
+    }
+  }
+})
 </script>
 
 <style>

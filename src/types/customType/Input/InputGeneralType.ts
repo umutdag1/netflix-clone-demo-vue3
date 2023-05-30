@@ -1,6 +1,6 @@
-import InputTextType from './InputTextType';
-import InputCheckBoxType from './InputCheckBoxType';
+import InputTextType from './InputTextType'
+import InputCheckBoxType from './InputCheckBoxType'
 
-type InputGeneralType = InputTextType | InputCheckBoxType;
+type InputGeneralType = InputTextType | InputCheckBoxType
 
-export default InputGeneralType;
+export default InputGeneralType
